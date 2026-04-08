@@ -4,13 +4,18 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #0D13D7;
+    --secondary-color: #fff;
+    --black-color: #000;
+}
+
+
 
 .container {
     width: 90%;
     margin: auto;
-
 }
-
 
 a {
     text-decoration: none;
@@ -19,6 +24,15 @@ a {
 ul {
 
     list-style: none;
+}
+
+a,
+img {
+    transition: 300ms;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
 }
 
 .grid-2 {

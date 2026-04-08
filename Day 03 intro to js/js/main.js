@@ -60,6 +60,4 @@ console.log('JS file linked successfully!');
 
 
 
-
-
- 
+var mynum = 10;
