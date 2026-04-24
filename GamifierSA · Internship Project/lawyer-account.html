@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حسابات المحامين</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="Sass/main.css">
+    <style>
+        /* ====================================================
+           DASHBOARD — MOBILE RESPONSIVE FIX
+           ==================================================== */
+        @media screen and (max-width: 768px) {
+            .main .side .side-content .open-btn {
+                position: fixed !important;
+                top: 10px !important; right: 10px !important;
+                z-index: 600 !important; margin: 0 !important;
+                width: 40px !important; height: 40px !important;
+                display: flex !important; align-items: center !important;
+                justify-content: center !important;
+                border-radius: 8px !important; font-size: 18px !important; padding: 0 !important;
+            }
+            .main .side .side-content .side-bar {
+                width: 82vw !important; max-width: 300px !important; z-index: 800 !important;
+            }
+            .main { flex-direction: column !important; height: auto !important; overflow: visible !important; }
+            .main .side { width: 100% !important; }
+            .main .content { width: 100% !important; min-height: unset !important; }
+            .main .content .content-header {
+                padding: 10px 60px 10px 12px !important;
+                flex-wrap: wrap !important; gap: 6px !important; align-items: center !important;
+            }
+            .main .content .About-header .admin-type { width: 175px !important; }
+            .table-content { overflow-x: auto !important; -webkit-overflow-scrolling: touch !important; }
+            .styled-table { min-width: 560px !important; font-size: 12px !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="side">
+            <div class="side-content">
+                <div class="open-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="side-bar hidden">
+                    <header class="bar-header">
+                        <div class="close-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                        <div class="logo">
+                            <img src="assets/images/logo.png" alt="--Logo--">
+                        </div>
+                    </header>
+                    <div class="list"><h2>القائمة</h2></div>
+                    <div class="menu-list">
+                        <div class="side-item">
+                            <a href="#" class="sub-btn">
+                                <i class="fa-regular fa-shapes"></i> نظرة عامة
+                                <i class="fa-solid fa-chevron-left dropdown"></i>
+                            </a>
+                            <div class="sub-menu">
+                                <a href="index.html" class="sub-item">الصفحة الرئيسية</a>
+                                <a href="formPage.html" class="sub-item">رفع قضية</a>
+                                <a href="login-page.html" class="sub-item">إعدادات الحساب</a>
+                            </div>
+                        </div>
+                        <div class="side-item">
+                            <a href="#" class="sub-btn">
+                                <i class="fa-solid fa-briefcase"></i> القضايا
+                                <i class="fa-solid fa-chevron-left dropdown"></i>
+                            </a>
+                            <div class="sub-menu">
+                                <a href="formPage.html" class="sub-item">رفع قضية جديدة</a>
+                                <a href="case-form-1.html" class="sub-item">نموذج القضية 1</a>
+                                <a href="case-form-2.html" class="sub-item">نموذج القضية 2</a>
+                            </div>
+                        </div>
+                        <div class="side-item">
+                            <a href="#" class="sub-btn">
+                                <i class="fa-regular fa-user"></i> الحسابات
+                                <i class="fa-solid fa-chevron-left dropdown"></i>
+                            </a>
+                            <div class="sub-menu">
+                                <a href="advisor -accounts.html" class="sub-item">حسابات المستشارين</a>
+                                <a href="lawyer-account.html" class="sub-item" style="color:#caa280; font-weight:bold;">◀ حسابات المحامين</a>
+                            </div>
+                        </div>
+                        <div class="side-item">
+                            <a href="#" class="sub-btn">
+                                <i class="fa-solid fa-users"></i> المستخدمين
+                                <i class="fa-solid fa-chevron-left dropdown"></i>
+                            </a>
+                            <div class="sub-menu">
+                                <a href="advisor -accounts.html" class="sub-item">المستشارون</a>
+                                <a href="lawyer-account.html" class="sub-item">المحامون</a>
+                                <a href="#" class="sub-item">العملاء</a>
+                            </div>
+                        </div>
+                        <div class="side-item">
+                            <a href="#" class="sub-btn">
+                                <i class="fa-regular fa-newspaper"></i> تقارير
+                                <i class="fa-solid fa-chevron-left dropdown"></i>
+                            </a>
+                            <div class="sub-menu">
+                                <a href="#" class="sub-item">تقرير شهري</a>
+                                <a href="#" class="sub-item">تقرير سنوي</a>
+                                <a href="#" class="sub-item">إحصائيات</a>
+                            </div>
+                        </div>
+                        <div class="side-item">
+                            <a href="#" class="sub-btn">
+                                <i class="fa-regular fa-message"></i> الرسائل
+                                <i class="fa-solid fa-chevron-left dropdown"></i>
+                            </a>
+                            <div class="sub-menu">
+                                <a href="#" class="sub-item">صندوق الوارد</a>
+                                <a href="#" class="sub-item">المرسلة</a>
+                                <a href="#" class="sub-item">رسالة جديدة</a>
+                            </div>
+                        </div>
+                        <div class="side-item">
+                            <a href="#" class="sub-btn">
+                                <i class="fa-solid fa-gear"></i> الضبط
+                                <i class="fa-solid fa-chevron-left dropdown"></i>
+                            </a>
+                            <div class="sub-menu">
+                                <a href="#" class="sub-item">إعدادات عامة</a>
+                                <a href="#" class="sub-item">الأمان</a>
+                                <a href="#" class="sub-item">الإشعارات</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="list"><h2>المساعدة</h2></div>
+                    <div class="menu-list">
+                        <div class="side-item">
+                            <a href="#" class="sub-btn"><i class="fa-solid fa-headset"></i> الدعم الفني</a>
+                        </div>
+                        <div class="side-item">
+                            <a href="#" class="sub-btn"><i class="fa-solid fa-briefcase"></i> الضبط</a>
+                        </div>
+                        <div class="side-item">
+                            <a href="login-page.html" class="sub-btn">
+                                <i class="fa-solid fa-right-from-bracket"></i> تسجيل الخروج
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-header">
+                <div class="search-header">
+                    <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input placeholder="بحث" class="search-input" type="text" />
+                </div>
+                <button class="search-btn-temp"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="About-header">
+                    <div class="admin-type">
+                        <div class="dropdownIcon"><i class="fa-solid fa-chevron-down"></i></div>
+                        <div class="admin-info">
+                            <h2 class="admin-name">Ashraf Gad</h2>
+                            <p class="admin-jobtitle">Product Manager</p>
+                        </div>
+                        <div class="admin-img">
+                            <img src="assets/Photos/Admin-test.jpg" alt="Admin">
+                        </div>
+                    </div>
+                    <div class="notification"><i class="fa-regular fa-bell"></i></div>
+                </div>
+            </div>
+            <div class="page-title">
+                <div class="posation"><h2>المحامون</h2></div>
+                <div class="btn-add-account">
+                    <button><i class="fa-regular fa-plus"></i><span>أضافة حساب</span></button>
+                </div>
+            </div>
+            <!-- Quick nav between account pages -->
+            <div style="display:flex; gap:10px; padding: 10px 20px; margin-bottom:5px;">
+                <a href="advisor -accounts.html" style="background:#f0e6de; color:#7a5c44; padding:6px 16px; border-radius:6px; text-decoration:none; font-size:14px;">المستشارون</a>
+                <a href="lawyer-account.html" style="background:#caa280; color:white; padding:6px 16px; border-radius:6px; text-decoration:none; font-size:14px; font-weight:bold;">المحامون</a>
+            </div>
+            <div class="table-content">
+                <table class="styled-table">
+                    <thead>
+                        <tr class="head-tr">
+                            <th>الرقم التعريفي</th>
+                            <th>أسم المستخدم</th>
+                            <th>عدد القضايا المسندة</th>
+                            <th>حالة الحساب</th>
+                            <th>رقم الجوال</th>
+                            <th>الاميل</th>
+                            <th>حذف الحساب </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3030301</td>
+                            <td>خالد الراشد</td>
+                            <td>8</td>
+                            <td><input class="switch" type="checkbox" checked></td>
+                            <td>501234</td>
+                            <td>khalid@waqaa.com</td>
+                            <td class="trach-btn"><button class="bin-button"><i class="fa-solid fa-trash-can"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td>3030302</td>
+                            <td>سارة المالكي</td>
+                            <td>4</td>
+                            <td><input class="switch" type="checkbox" checked></td>
+                            <td>501235</td>
+                            <td>sara@waqaa.com</td>
+                            <td class="trach-btn"><button class="bin-button"><i class="fa-solid fa-trash-can"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/Advisor-Accounts.js"></script>
+</body>
+
+</html>

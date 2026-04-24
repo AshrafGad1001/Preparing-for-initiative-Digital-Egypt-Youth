@@ -1,0 +1,582 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap");
+@import "variables.scss";
+
+/* ---------------------------------------- */
+/* IndexPage */
+/* ---------------------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: auto;
+    background-color: #ffffff;
+    font-family: "Almarai", sans-serif;
+}
+
+// -----------Section One 
+.landding-section-one {
+    position: relative;
+    background-color: transparent;
+
+    .over-lay {
+        background-color: rgba(23, 24, 25, 0.7);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .landing {
+        .landing-info {
+            position: absolute;
+            top: 35%;
+            bottom: 0;
+            right: 15%;
+            left: 0;
+
+            h2 {
+                color: $primary-color-light ;
+                font-size: 50px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 24px;
+                color: $secondary-color-main-light;
+            }
+
+            .start-service {
+                font-size: 22px;
+
+                .fa-scale-balanced {
+                    font-size: 32px;
+                    margin: 0 25px;
+                    color: #D3AE8E;
+                }
+
+                button {
+                    color: $secondary-color-main-light;
+                    background-color: transparent;
+                    width: 197px;
+                    height: 50px;
+                    border: 2px 0px 0px 0px;
+                    opacity: 0px;
+
+                    border: 2px solid #B3753F;
+
+
+                    i {
+                        margin: 0 15px;
+                        color: $secondary-color-main-light;
+                    }
+                }
+            }
+
+            .social-media {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 100px;
+
+                .rotate-pargraph {
+                    transform: rotate(90deg);
+                }
+
+                .icons {
+                    font-size: 2 3px;
+                    color: $secondary-color-main-light;
+                }
+
+            }
+        }
+    }
+
+    .first-navbar {
+        border-bottom: 1px solid $third-color-gray ;
+        color: #ffffff !important;
+    }
+
+    .nav-contact-info {
+        i {
+            font-size: 22px;
+        }
+
+        .contact-info {
+            line-height: 4px;
+
+            h6 {
+                direction: ltr;
+                font-size: 15px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+
+        .lang {
+            cursor: pointer;
+        }
+
+        .fa-bars-staggered {
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+
+    .sec-navbar {
+        background-color: transparent !important;
+        margin-top: 81px;
+        margin-right: 100px;
+        position: fixed;
+
+        li {
+            a {
+                color: #ffffff !important;
+            }
+        }
+
+        .nav-link {
+            font-weight: 500;
+            padding-top: 12px;
+        }
+
+        .active {
+            border-top: 4px solid $primary-color-light;
+            color: $primary-color-light !important;
+        }
+    }
+}
+
+// -----------Section Two 
+
+.about {
+    padding: 20px 0;
+    color: $secondary-color-main-light ;
+    background-color: $background-dark-helper;
+
+    h2 {
+        color: $primary-color-light;
+    }
+
+    .section-header.logo {
+        h3 {
+            color: $primary-color-light;
+
+            span {
+                font-size: 20px;
+                color: rgba($color: $primary-color-light, $alpha: 0.7);
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 22px;
+        }
+    }
+
+    .balance-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 55px;
+        color: $primary-color-dark;
+        width: 173px;
+        height: 193px;
+        background-color: $primary-color-light;
+        border-radius: 35px;
+    }
+
+    .about-card {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h4 {
+            margin-top: 20px;
+            color: $secondary-color-main-light;
+        }
+
+        h5 {
+            color: $secondary-color-light;
+        }
+
+        .about-icon {
+            width: 77px;
+            height: 77px;
+            padding: 15px 10px 0 10px;
+            border: 2px solid;
+            padding: 20px;
+            border-radius: 18px;
+
+            i {
+                color: $secondary-color-main-light;
+                font-size: 30px;
+            }
+        }
+    }
+
+    .about-card::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        width: 1px;
+        height: 50%;
+        background: #ccc;
+        transform: translateY(-50%);
+    }
+
+    .row.All-about-cards .about-card:nth-child(1)::after {
+
+        display: none;
+    }
+
+}
+
+// -----------Section three
+.about-two {
+    background-color: #F2F2F3;
+    padding: 30px 40px;
+
+    .section-header {
+        h2 {
+            padding: 12px;
+            font-weight: 600;
+            color: rgba($color: $primary-color-light, $alpha: 0.7);
+        }
+
+        p {
+            font-size: 23px;
+            font-weight: 500;
+            color: $primary-color-dark;
+        }
+    }
+
+    .icon-info {
+        padding: 20px 30px;
+        border: 2px solid rgba($color: $primary-color-light, $alpha: 0.7);
+        border-radius: 20px;
+
+        i {
+            padding: 24px;
+            font-size: 43px;
+        }
+    }
+
+    button {
+        font-weight: 500;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        color: rgba($color: $primary-color-light, $alpha: 0.7);
+
+        i.fa-arrow-left {
+            font-size: 18px;
+        }
+    }
+
+}
+
+// -----------Section Four
+.team {
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+
+    .section-header {
+        h2 {
+            font-weight: 700;
+            color: rgba($color: $primary-color-light, $alpha: 1.2);
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 25px;
+            color: $primary-color-dark;
+        }
+    }
+
+    .lawyer-card {
+        .lawyer-head {
+            padding: 10px;
+            color: white;
+            background-color: #282B3A;
+
+            h3 {
+                font-size: 18px;
+                font-weight: 700;
+                color: rgba($color: $primary-color-light, $alpha: 1.0);
+            }
+
+            p {
+                font-weight: 500;
+
+            }
+
+            .icon {
+                background-color: rgba($color: $primary-color-light, $alpha: 1.0);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                padding: 0 5px 7px 5px;
+                cursor: pointer;
+            }
+
+            i {
+                font-size: 25px;
+            }
+        }
+
+        .lawyer-info {
+            color: white;
+            background-color: #282B3A;
+            padding: 17px;
+
+            .lawyer-Descrption {
+                font-size: 17px;
+                font-weight: 500;
+
+            }
+
+            .lowyer-Socail {
+                margin-top: 12px;
+                padding: 12px 0;
+                color: #CAA280;
+                border-top: 2px solid #CAA280;
+            }
+        }
+    }
+}
+
+// -----------Section Five
+.contact-section {
+    position: relative;
+    height: 60vh;
+    background-image: url(../assets/images/index2.jpg);
+    background-position: center;
+
+
+    .over-lay {
+        background-color: rgba(23, 24, 25, 0.7);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .contact-form {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        background-color: #282B3AB2;
+        border-radius: 23px;
+
+
+        input,
+        textarea {
+            background-color: #505364b2;
+        }
+
+        button {
+            background-color: transparent;
+            font-weight: 600;
+            font-size: 18px;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            border: 2px solid rgba($color: $primary-color-light, $alpha: 1.0);
+        }
+    }
+
+    .Contact-info {
+        display: flex;
+        align-items: left;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 100px 100px 0 0;
+
+        .Plateform-name {
+            color: #D3AE8E;
+            font-weight: 900;
+            font-size: 35px;
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 23px;
+            color: white;
+        }
+    }
+
+}
+
+.footer-section {
+    background-color: $third-color-darkGray;
+    padding: 20px;
+
+    .footer-info {
+
+        h3 {
+            color: white;
+            padding: 12px 0;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        p {
+            color: #FFFFFF78;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+    }
+
+    .footer-icons {
+        padding: 0 20px;
+
+        h3 {
+            color: white;
+            padding: 12px 0;
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: self-start;
+            font-size: 22px;
+
+            i {
+                cursor: pointer;
+                color: #CAA280;
+            }
+        }
+    }
+
+    .footer-contact {
+        h3 {
+            color: white;
+            padding: 12px 0;
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: white;
+            direction: ltr;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+
+    .footer-contact-Email {
+        direction: ltr;
+
+        .head {
+            padding: 12px;
+            color: white;
+            font-weight: 500;
+            font-size: 20px;
+            direction: ltr;
+        }
+
+        .input-Email {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            button {
+                cursor: pointer;
+                padding: 12px 20px;
+                border: 3px solid #CAA280;
+                margin-left: 20px;
+                border-radius: 5px;
+            }
+
+            .form-floating {
+                width: 80%;
+
+                label {
+                    span {
+                        font-size: 17px;
+                        font-weight: 500;
+                    }
+
+                    i {
+                        color: #CAA280;
+                        font-size: 22px;
+                    }
+                }
+            }
+
+
+        }
+
+        .link-contact {
+            color: #F2F2F3;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 1.2px;
+        }
+
+    }
+
+    .Copyright {
+        border-top: 3px solid #CAA280;
+        direction: ltr;
+        padding: 10px 0;
+        font-size: 20px;
+        font-weight: 500;
+        color: white;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .sec-navbar {
+        display: none;
+    }
+
+    .nav-contact-info {
+        .lang {
+            display: none;
+        }
+    }
+
+    .row.All-about-cards .about-card::after {
+        display: none;
+    }
+}

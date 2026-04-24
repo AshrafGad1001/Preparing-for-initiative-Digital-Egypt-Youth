@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="Sass/main.css">
+    <style>
+        /* === Back button === */
+        .back-btn {
+            position: fixed; top: 12px; left: 15px;
+            color: #caa280; text-decoration: none;
+            font-size: 13px; display: flex; align-items: center; gap: 5px;
+            z-index: 999; background: rgba(255,255,255,0.9);
+            padding: 5px 10px; border-radius: 20px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+        }
+        .back-btn:hover { color: #b8906d; }
+
+        /* ====================================================
+           LOGIN PAGE — MOBILE RESPONSIVE
+           ==================================================== */
+        @media screen and (max-width: 768px) {
+            body { overflow-y: auto !important; }
+
+            /* Full-page container → vertical stack */
+            .container {
+                flex-direction: column !important;
+                height: auto !important;
+                max-height: none !important;
+                min-height: 100vh !important;
+                align-items: stretch !important;
+                overflow: visible !important;
+            }
+
+            /* RIGHT SIDE = compact image banner at top */
+            .container .right-side {
+                width: 100% !important;
+                height: 210px !important;
+                max-height: 210px !important;
+                min-height: 210px !important;
+                overflow: hidden !important;
+                flex-shrink: 0;
+                position: relative !important;
+            }
+            /* Absolute image now constrained to 210px parent */
+            .container .right-side .login-bg {
+                position: absolute !important;
+                top: 0 !important; left: 0 !important;
+                width: 100% !important;
+                height: 210px !important;
+                object-fit: cover;
+                border-radius: 0 0 30px 30px !important;
+            }
+            .container .right-side .over-lay {
+                position: absolute !important;
+                height: 210px !important;
+                border-radius: 0 0 30px 30px !important;
+            }
+            .container .right-side .img-description {
+                position: relative !important;
+                z-index: 5;
+                height: 210px !important;
+                padding: 15px 20px !important;
+                justify-content: center !important;
+            }
+            .container .right-side .img-description .logo img {
+                width: 45px !important; height: 40px !important;
+            }
+            .container .right-side .img-description h3 {
+                font-size: 13px !important;
+                margin-top: 5px !important;
+            }
+            .container .right-side .img-description h4 { display: none !important; }
+            .container .right-side .img-description .break-line {
+                margin-top: 8px !important; margin-bottom: 8px !important;
+            }
+            .container .right-side .img-description .logo-2 { display: none !important; }
+
+            /* LEFT SIDE = form below image */
+            .container .left-side {
+                width: 100% !important;
+                height: auto !important;
+                max-height: none !important;
+                padding: 25px 20px 50px 20px !important;
+                overflow: visible !important;
+            }
+            .container .left-side h2 {
+                font-size: 22px !important;
+                margin-bottom: 20px !important;
+            }
+            .container .left-side form #submit {
+                font-size: 16px !important;
+                padding: 12px !important;
+            }
+        }
+
+        /* TABLET */
+        @media screen and (min-width: 769px) and (max-width: 992px) {
+            .container .right-side { width: 50% !important; }
+            .container .left-side { width: 50% !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container" style="position:relative;">
+            <!-- Back to home button -->
+            <a href="index.html" class="back-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>الرئيسية</span>
+            </a>
+
+            <div class="right-side">
+                <img class="login-bg" src="assets/images/login-page.jpeg" alt="">
+                <div class="over-lay"></div>
+                <div class="img-description">
+                    <div class="logo"><img src="assets/images/logo.png" alt=""></div>
+                    <h3>مكتب واقعة للأستشارات القانونية</h3>
+                    <div class="break-line"></div>
+                    <h4>هي شركة رأئدة تستهدف سوق واحد<br> من الاسواق القانوني تنظيم خدمة التقاضي</h4>
+                    <img class="logo-2" src="assets/images/logo-2.png" alt="">
+                </div>
+            </div>
+            <div class="left-side">
+                <div class="dropDown">
+                    <i class="fa-solid fa-globe"></i>
+                    <div class="select">
+                        <span class="selected">تسجيل الدخول </span>
+                        <div class="arrow"></div>
+                    </div>
+                    <ul class="menu">
+                        <li>تسجيل محامي</li>
+                        <li>تسجيل مستشار</li>
+                    </ul>
+                </div>
+                <h2 class="h2">تسجيل الدخول</h2>
+                <form id="loginForm">
+                    <div class="login-info">
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <div class="input-group">
+                                <input class="box" type="email" id="email" name="email" required>
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">كلمة المرور</label>
+                            <div class="input-group">
+                                <input class="box" type="password" id="password" name="password" required>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="forget">هل نسيت كلمة المرور؟</a>
+                    <button id="submit" type="submit">
+                        تسجيل الدخول
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+        // On form submit → redirect to dashboard
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Redirect to advisor accounts dashboard
+            window.location.href = 'advisor -accounts.html';
+        });
+    </script>
+</body>
+</html>

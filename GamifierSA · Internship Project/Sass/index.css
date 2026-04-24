@@ -1,0 +1,641 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap");
+/* Border Radius */
+/* ---------------------------------------- */
+/* IndexPage */
+/* ---------------------------------------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: auto;
+  background-color: #ffffff;
+  font-family: "Almarai", sans-serif;
+}
+
+.landding-section-one {
+  position: relative;
+  background-color: transparent;
+}
+.landding-section-one .over-lay {
+  background-color: rgba(23, 24, 25, 0.7);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.landding-section-one .landing .landing-info {
+  position: absolute;
+  top: 35%;
+  bottom: 0;
+  right: 15%;
+  left: 0;
+}
+.landding-section-one .landing .landing-info h2 {
+  color: #caa280;
+  font-size: 50px;
+  font-weight: 600;
+}
+.landding-section-one .landing .landing-info p {
+  font-size: 24px;
+  color: #B1B1B2;
+}
+.landding-section-one .landing .landing-info .start-service {
+  font-size: 22px;
+}
+.landding-section-one .landing .landing-info .start-service .fa-scale-balanced {
+  font-size: 32px;
+  margin: 0 25px;
+  color: #D3AE8E;
+}
+.landding-section-one .landing .landing-info .start-service button {
+  color: #B1B1B2;
+  background-color: transparent;
+  width: 197px;
+  height: 50px;
+  border: 2px 0px 0px 0px;
+  opacity: 0px;
+  border: 2px solid #B3753F;
+}
+.landding-section-one .landing .landing-info .start-service button i {
+  margin: 0 15px;
+  color: #B1B1B2;
+}
+.landding-section-one .landing .landing-info .social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 100px;
+}
+.landding-section-one .landing .landing-info .social-media .rotate-pargraph {
+  transform: rotate(90deg);
+}
+.landding-section-one .landing .landing-info .social-media .icons {
+  font-size: 2 3px;
+  color: #B1B1B2;
+}
+.landding-section-one .first-navbar {
+  border-bottom: 1px solid rgb(90, 91, 101);
+  color: #ffffff !important;
+}
+.landding-section-one .nav-contact-info i {
+  font-size: 22px;
+}
+.landding-section-one .nav-contact-info .contact-info {
+  line-height: 4px;
+}
+.landding-section-one .nav-contact-info .contact-info h6 {
+  direction: ltr;
+  font-size: 15px;
+}
+.landding-section-one .nav-contact-info .contact-info p {
+  font-size: 15px;
+}
+.landding-section-one .nav-contact-info .lang {
+  cursor: pointer;
+}
+.landding-section-one .nav-contact-info .fa-bars-staggered {
+  font-size: 30px;
+  cursor: pointer;
+}
+.landding-section-one .sec-navbar {
+  background-color: transparent !important;
+  margin-top: 81px;
+  margin-right: 100px;
+  position: fixed;
+}
+.landding-section-one .sec-navbar li a {
+  color: #ffffff !important;
+}
+.landding-section-one .sec-navbar .nav-link {
+  font-weight: 500;
+  padding-top: 12px;
+}
+.landding-section-one .sec-navbar .active {
+  border-top: 4px solid #caa280;
+  color: #caa280 !important;
+}
+
+.about {
+  padding: 20px 0;
+  color: #B1B1B2;
+  background-color: #282B3A;
+}
+.about h2 {
+  color: #caa280;
+}
+.about .section-header.logo h3 {
+  color: #caa280;
+}
+.about .section-header.logo h3 span {
+  font-size: 20px;
+  color: rgba(202, 162, 128, 0.7);
+}
+.about .section-header.logo p {
+  font-weight: 400;
+  font-size: 22px;
+}
+.about .balance-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+  color: #0f111e;
+  width: 173px;
+  height: 193px;
+  background-color: #caa280;
+  border-radius: 35px;
+}
+.about .about-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about .about-card h4 {
+  margin-top: 20px;
+  color: #B1B1B2;
+}
+.about .about-card h5 {
+  color: #d3ae8e;
+}
+.about .about-card .about-icon {
+  width: 77px;
+  height: 77px;
+  padding: 15px 10px 0 10px;
+  border: 2px solid;
+  padding: 20px;
+  border-radius: 18px;
+}
+.about .about-card .about-icon i {
+  color: #B1B1B2;
+  font-size: 30px;
+}
+.about .about-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 1px;
+  height: 50%;
+  background: #ccc;
+  transform: translateY(-50%);
+}
+.about .row.All-about-cards .about-card:nth-child(1)::after {
+  display: none;
+}
+
+.about-two {
+  background-color: #F2F2F3;
+  padding: 30px 40px;
+}
+.about-two .section-header h2 {
+  padding: 12px;
+  font-weight: 600;
+  color: rgba(202, 162, 128, 0.7);
+}
+.about-two .section-header p {
+  font-size: 23px;
+  font-weight: 500;
+  color: #0f111e;
+}
+.about-two .icon-info {
+  padding: 20px 30px;
+  border: 2px solid rgba(202, 162, 128, 0.7);
+  border-radius: 20px;
+}
+.about-two .icon-info i {
+  padding: 24px;
+  font-size: 43px;
+}
+.about-two button {
+  font-weight: 500;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: rgba(202, 162, 128, 0.7);
+}
+.about-two button i.fa-arrow-left {
+  font-size: 18px;
+}
+
+.team {
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+}
+.team .section-header h2 {
+  font-weight: 700;
+  color: #caa280;
+  margin-bottom: 20px;
+}
+.team .section-header p {
+  font-weight: 500;
+  font-size: 25px;
+  color: #0f111e;
+}
+.team .lawyer-card .lawyer-head {
+  padding: 10px;
+  color: white;
+  background-color: #282B3A;
+}
+.team .lawyer-card .lawyer-head h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #caa280;
+}
+.team .lawyer-card .lawyer-head p {
+  font-weight: 500;
+}
+.team .lawyer-card .lawyer-head .icon {
+  background-color: #caa280;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 0 5px 7px 5px;
+  cursor: pointer;
+}
+.team .lawyer-card .lawyer-head i {
+  font-size: 25px;
+}
+.team .lawyer-card .lawyer-info {
+  color: white;
+  background-color: #282B3A;
+  padding: 17px;
+}
+.team .lawyer-card .lawyer-info .lawyer-Descrption {
+  font-size: 17px;
+  font-weight: 500;
+}
+.team .lawyer-card .lawyer-info .lowyer-Socail {
+  margin-top: 12px;
+  padding: 12px 0;
+  color: #CAA280;
+  border-top: 2px solid #CAA280;
+}
+
+.contact-section {
+  position: relative;
+  height: 60vh;
+  background-image: url(../assets/images/index2.jpg);
+  background-position: center;
+}
+.contact-section .over-lay {
+  background-color: rgba(23, 24, 25, 0.7);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.contact-section .contact-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: rgba(40, 43, 58, 0.6980392157);
+  border-radius: 23px;
+}
+.contact-section .contact-form input,
+.contact-section .contact-form textarea {
+  background-color: rgba(80, 83, 100, 0.6980392157);
+}
+.contact-section .contact-form button {
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: 2px solid #caa280;
+}
+.contact-section .Contact-info {
+  display: flex;
+  align-items: left;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 100px 100px 0 0;
+}
+.contact-section .Contact-info .Plateform-name {
+  color: #D3AE8E;
+  font-weight: 900;
+  font-size: 35px;
+}
+.contact-section .Contact-info p {
+  font-weight: 600;
+  font-size: 23px;
+  color: white;
+}
+
+.footer-section {
+  background-color: rgb(40, 43, 58);
+  padding: 20px;
+}
+.footer-section .footer-info h3 {
+  color: white;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 800;
+}
+.footer-section .footer-info p {
+  color: rgba(255, 255, 255, 0.4705882353);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.footer-section .footer-icons {
+  padding: 0 20px;
+}
+.footer-section .footer-icons h3 {
+  color: white;
+  padding: 12px 0;
+  font-size: 26px;
+  font-weight: 800;
+}
+.footer-section .footer-icons .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: self-start;
+  font-size: 22px;
+}
+.footer-section .footer-icons .icons i {
+  cursor: pointer;
+  color: #CAA280;
+}
+.footer-section .footer-contact h3 {
+  color: white;
+  padding: 12px 0;
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.footer-section .footer-contact p {
+  color: white;
+  direction: ltr;
+  font-weight: 500;
+  font-size: 16px;
+}
+.footer-section .footer-contact-Email {
+  direction: ltr;
+}
+.footer-section .footer-contact-Email .head {
+  padding: 12px;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  direction: ltr;
+}
+.footer-section .footer-contact-Email .input-Email {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footer-section .footer-contact-Email .input-Email button {
+  cursor: pointer;
+  padding: 12px 20px;
+  border: 3px solid #CAA280;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+.footer-section .footer-contact-Email .input-Email .form-floating {
+  width: 80%;
+}
+.footer-section .footer-contact-Email .input-Email .form-floating label span {
+  font-size: 17px;
+  font-weight: 500;
+}
+.footer-section .footer-contact-Email .input-Email .form-floating label i {
+  color: #CAA280;
+  font-size: 22px;
+}
+.footer-section .footer-contact-Email .link-contact {
+  color: #F2F2F3;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+}
+.footer-section .Copyright {
+  border-top: 3px solid #CAA280;
+  direction: ltr;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .sec-navbar {
+    display: none;
+  }
+  .nav-contact-info .lang {
+    display: none;
+  }
+  .row.All-about-cards .about-card::after {
+    display: none;
+  }
+}/*# sourceMappingURL=index.css.map */
+/* ===================================================
+   RESPONSIVE FIXES - Mobile First
+   =================================================== */
+
+/* ---- MOBILE (max 768px) ---- */
+@media screen and (max-width: 768px) {
+
+  /* === NAVBAR === */
+  .first-navbar .container {
+    flex-wrap: nowrap !important;
+    padding: 4px 12px !important;
+  }
+  .navbar-brand {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    flex: 0 0 auto;
+  }
+  .navbar-brand img {
+    width: 45px !important;
+    height: 45px !important;
+  }
+  /* Hide phone number & email on mobile */
+  .nav-contact {
+    display: none !important;
+  }
+  /* Hide separator | on mobile */
+  .nav-contact-info > span {
+    display: none !important;
+  }
+  .nav-contact-info {
+    gap: 8px !important;
+  }
+
+  /* === LANDING INFO - fix absolute overflow === */
+  .landding-section-one .landing .landing-info {
+    position: absolute;
+    top: 5% !important;
+    right: 5% !important;
+    left: 5% !important;
+    padding: 10px;
+  }
+  .landding-section-one .landing .landing-info h2 {
+    font-size: 28px !important;
+    line-height: 1.3;
+  }
+  .landding-section-one .landing .landing-info p {
+    font-size: 15px !important;
+    line-height: 1.5;
+  }
+  .landding-section-one .landing .landing-info .start-service {
+    font-size: 15px !important;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  .landding-section-one .landing .landing-info .start-service button {
+    width: auto !important;
+    height: 42px !important;
+    padding: 0 14px !important;
+    font-size: 14px !important;
+    white-space: nowrap;
+  }
+  .landding-section-one .landing .landing-info .start-service .fa-scale-balanced {
+    font-size: 22px !important;
+    margin: 0 8px !important;
+  }
+
+  /* === HIDE SOCIAL MEDIA on mobile (too cramped) === */
+  .landding-section-one .landing .landing-info .social-media {
+    display: none !important;
+  }
+
+  /* === LANDING IMAGE height on mobile === */
+  .landding-section-one .landing img {
+    height: 420px;
+    object-fit: cover;
+  }
+
+  /* === SEC NAVBAR already hidden === */
+
+  /* === ABOUT SECTION === */
+  .about {
+    padding: 15px 0;
+  }
+  .about .balance-logo {
+    width: 120px !important;
+    height: 130px !important;
+    font-size: 38px !important;
+  }
+  .about-card {
+    margin-bottom: 15px !important;
+  }
+
+  /* === ABOUT-TWO SECTION === */
+  .about-two {
+    padding: 20px 15px !important;
+  }
+  .about-two .icon-info {
+    margin-bottom: 20px;
+    padding: 15px !important;
+  }
+  .about-two .section-header p {
+    font-size: 16px !important;
+  }
+
+  /* === TEAM SECTION === */
+  .team .lawyer-card {
+    margin-bottom: 15px;
+  }
+
+  /* === CONTACT SECTION === */
+  .contact-section {
+    height: auto !important;
+    min-height: 60vh;
+  }
+  .contact-section .over-lay {
+    position: relative !important;
+    padding: 30px 15px !important;
+  }
+  .contact-section .over-lay .container {
+    padding: 0 !important;
+  }
+  .contact-section .over-lay .container .row .d-flex {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  .contact-section .contact-form {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 15px !important;
+    margin-top: 0 !important;
+  }
+  .contact-section .Contact-info {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 15px !important;
+  }
+  .contact-section .Contact-info .Plateform-name {
+    font-size: 26px !important;
+  }
+  .contact-section .Contact-info p {
+    font-size: 16px !important;
+  }
+
+  /* === FOOTER === */
+  .footer-section .footer-icons,
+  .footer-section .footer-contact,
+  .footer-section .footer-info,
+  .footer-section .footer-contact-Email {
+    margin-bottom: 20px;
+  }
+  .footer-section .footer-contact-Email .input-Email {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px;
+  }
+  .footer-section .footer-contact-Email .input-Email .form-floating {
+    width: 100% !important;
+  }
+  .footer-section .footer-contact-Email .input-Email button {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+}
+
+/* ---- TABLET (769px - 992px) ---- */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .landding-section-one .landing .landing-info h2 {
+    font-size: 36px !important;
+  }
+  .landding-section-one .landing .landing-info .social-media {
+    left: 30px !important;
+  }
+  .contact-section {
+    height: auto !important;
+    min-height: 60vh;
+  }
+  .contact-section .over-lay {
+    position: relative !important;
+    padding: 30px !important;
+  }
+}
+
+/* ✅ FIX 4: Start service button - remove link underline */
+.landing-info .start-service a {
+    text-decoration: none;
+}
+.landing-info .start-service a button {
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.landing-info .start-service a:hover button {
+    background-color: rgba(179, 117, 63, 0.2);
+    color: #caa280 !important;
+}

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Page</title>
+    <!-- Icon Style  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- Link bootstrap.min  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- link To Sass  -->
+    <link rel="stylesheet" href="Sass/index.css">
+    <style>
+        /* ====================================================
+           INDEX PAGE — COMPLETE RESPONSIVE FIX
+           ==================================================== */
+
+        /* --- Navbar login button --- */
+        .login-nav-btn {
+            background-color: #caa280;
+            color: white !important;
+            padding: 6px 18px !important;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .login-nav-btn:hover { background-color: #b8906d !important; }
+
+        /* --- Logo brand in navbar --- */
+        .navbar-brand-wrapper {
+            display: flex; align-items: center;
+            gap: 8px; text-decoration: none;
+        }
+        .navbar-brand-wrapper img {
+            width: 50px; height: 50px;
+            border-radius: 50%; object-fit: cover;
+        }
+        .navbar-brand-text {
+            color: #caa280; font-size: 20px;
+            font-weight: 800; letter-spacing: 1px;
+        }
+
+        /* --- z-index stacking fix --- */
+        .landding-section-one .over-lay { z-index: 1; }
+        .first-navbar { z-index: 1000 !important; }
+        .sec-navbar { z-index: 999 !important; }
+        .landding-section-one .landing { position: relative; }
+        .landding-section-one .landing .landing-info { z-index: 2; }
+
+        /* --- Start service button link fix --- */
+        .start-service a { text-decoration: none; }
+        .start-service a button { cursor: pointer; }
+
+        /* ====================================================
+           MOBILE MENU OVERLAY
+           ==================================================== */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 9998;
+        }
+        .mobile-menu {
+            position: fixed;
+            top: 0; right: -290px;
+            width: 280px; height: 100%;
+            background: #1a2340;
+            z-index: 9999;
+            padding: 20px;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+        .mobile-menu.open { right: 0; }
+        .mobile-menu .close-mobile {
+            color: white; font-size: 24px;
+            cursor: pointer; text-align: left; margin-bottom: 20px;
+        }
+        .mobile-menu ul { list-style: none; padding: 0; }
+        .mobile-menu ul li a {
+            color: white; text-decoration: none;
+            display: block; padding: 13px 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 16px;
+        }
+        .mobile-menu ul li a:hover { background: rgba(255,255,255,0.1); }
+
+        /* ====================================================
+           MOBILE (max-width: 768px)
+           ==================================================== */
+        @media screen and (max-width: 768px) {
+
+            /* NAVBAR */
+            .first-navbar .container {
+                flex-wrap: nowrap !important;
+                padding: 5px 12px !important;
+                min-height: 56px;
+            }
+            .navbar-brand-wrapper img { width: 38px !important; height: 38px !important; }
+            .navbar-brand-text { font-size: 15px !important; }
+            .nav-contact { display: none !important; }
+            .nav-contact-info > span { display: none !important; }
+            .nav-contact-info .lang { display: none !important; }
+            .d-none.d-lg-block { display: none !important; }
+            .fa-bars-staggered { cursor: pointer; font-size: 22px; }
+
+            /* LANDING */
+            .landding-section-one .landing img {
+                height: 420px !important;
+                object-fit: cover;
+            }
+            .landding-section-one .landing .landing-info {
+                top: 8% !important;
+                right: 4% !important;
+                left: 4% !important;
+                bottom: auto !important;
+            }
+            .landding-section-one .landing .landing-info h2 {
+                font-size: 26px !important;
+                line-height: 1.3 !important;
+            }
+            .landding-section-one .landing .landing-info p {
+                font-size: 14px !important;
+                line-height: 1.5 !important;
+            }
+            .landding-section-one .landing .landing-info .start-service {
+                font-size: 14px !important;
+                display: flex !important;
+                align-items: center !important;
+                flex-wrap: nowrap !important;
+                gap: 8px !important;
+                margin-top: 10px !important;
+            }
+            .landding-section-one .landing .landing-info .start-service button {
+                width: auto !important;
+                height: 40px !important;
+                padding: 0 14px !important;
+                font-size: 13px !important;
+                white-space: nowrap;
+            }
+            .landding-section-one .landing .landing-info .start-service .fa-scale-balanced {
+                font-size: 20px !important;
+                margin: 0 6px !important;
+            }
+            /* Hide social media sidebar on mobile */
+            .landding-section-one .landing .landing-info .social-media {
+                display: none !important;
+            }
+
+            /* ABOUT SECTION */
+            .about .balance-logo {
+                width: 100px !important;
+                height: 110px !important;
+                font-size: 36px !important;
+            }
+
+            /* ABOUT-TWO */
+            .about-two { padding: 20px 12px !important; }
+            .about-two .icon-info { margin-bottom: 16px; padding: 12px !important; }
+            .about-two .section-header p { font-size: 16px !important; }
+
+            /* CONTACT SECTION */
+            .contact-section { height: auto !important; min-height: unset !important; }
+            .contact-section .over-lay {
+                position: relative !important;
+                padding: 25px 15px !important;
+            }
+            .contact-section .over-lay .container {
+                width: 100% !important;
+                padding: 0 !important;
+            }
+            .contact-section .over-lay .row .d-flex {
+                flex-direction: column !important;
+                gap: 16px !important;
+            }
+            .contact-section .contact-form {
+                width: 100% !important;
+                margin-top: 0 !important;
+                padding: 14px !important;
+            }
+            .contact-section .Contact-info {
+                width: 100% !important;
+                padding: 0 !important;
+            }
+            .contact-section .Contact-info .Plateform-name { font-size: 24px !important; }
+            .contact-section .Contact-info p { font-size: 15px !important; }
+
+            /* FOOTER */
+            .footer-section .footer-contact-Email .input-Email {
+                flex-direction: column !important;
+                gap: 10px !important;
+            }
+            .footer-section .footer-contact-Email .input-Email .form-floating { width: 100% !important; }
+            .footer-section .footer-contact-Email .input-Email button { margin-left: 0 !important; }
+        }
+
+        /* TABLET (769–992px) */
+        @media screen and (min-width: 769px) and (max-width: 992px) {
+            .landding-section-one .landing .landing-info h2 { font-size: 38px !important; }
+            .landding-section-one .landing .landing-info .social-media { left: 30px !important; }
+            .contact-section { height: auto !important; }
+            .contact-section .over-lay { position: relative !important; padding: 30px !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="close-mobile" id="closeMobile"><i class="fa-solid fa-xmark"></i></div>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="#about-section">الخدمات</a></li>
+            <li><a href="#about-two-section">من نحن</a></li>
+            <li><a href="#contact-section">تواصل معنا</a></li>
+            <li><a href="formPage.html">ارفع قضية</a></li>
+            <li><a href="login-page.html" class="login-nav-btn" style="margin-top:10px; display:inline-block;">تسجيل الدخول</a></li>
+        </ul>
+    </div>
+
+    <!-- Section one  -->
+    <section class="landding-section-one">
+        <div class="over-lay"></div>
+        <!-- Nav One -->
+        <nav class="navbar first-navbar navbar-expand-lg navbar-light text-white fixed-top">
+            <div class="container d-flex justify-content-between align-items-center ">
+                <div class="col-lg-4 navbar-brand mt-2 me-5">
+                    <a href="index.html" class="navbar-brand-wrapper">
+                        <img src="logo.png" alt="logo">
+                        <span class="navbar-brand-text">واقعة</span>
+                    </a>
+                </div>
+                <div class="nav-contact-info d-flex justify-content-between align-items-center gap-2">
+                    <div class="lang">
+                        <span>عربي</span>
+                        <span class="mx-1">|</span>
+                        <span>EN</span>
+                    </div>
+                    <span class="mx-2">|</span>
+                    <div class="nav-contact  d-flex justify-content-between align-items-center gap-3">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <div class="contact-info  d-flex flex-column align-items-center">
+                            <h6>+966 353523255</h6>
+                            <p>info@waqaa.com</p>
+                        </div>
+                    </div>
+                    <span class="mx-2">|</span>
+                    <!-- Login button (desktop) -->
+                    <a href="login-page.html" class="nav-link login-nav-btn d-none d-lg-block">
+                        <i class="fa-solid fa-right-to-bracket me-1"></i> تسجيل الدخول
+                    </a>
+                    <!-- Hamburger (mobile) -->
+                    <i class="fa-solid fa-bars-staggered d-lg-none" id="openMobileMenu" style="cursor:pointer; font-size:22px;"></i>
+                </div>
+            </div>
+        </nav>
+        <!-- Nav Two -->
+        <nav class="navbar sec-navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-section">الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-two-section">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-section">تواصل معنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formPage.html">ارفع قضية</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="landing">
+            <img src="assets/images/index1.jpg" class="d-block w-100" alt="Landing page">
+            <div class="landing-info">
+                <h2>واقعة الأفراد</h2>
+                <p>الشركة أو فرد ضد فرد والعكس بمختلف<br>اختصاصاتها</p>
+                <div class="start-service">
+                    <!-- LINKED to formPage -->
+                    <a href="formPage.html">
+                        <button>أبدء الخدمة <i class="fa-solid fa-caret-left"></i></button>
+                    </a>
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <div class="social-media">
+                    <p class="rotate-pargraph">Social media</p>
+                    <br>
+                    <div class="icons mt-5 d-flex justify-content-between flex-column gap-2">
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Two  -->
+    <section class="about" id="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>من نحن</h2>
+                        <p>هي الشركة رائدة تستهدف سوق واحد من الاسواق القانوني</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12  ">
+                    <div
+                        class="section-header logo text-center pb-5 d-flex justify-content-center align-items-center gap-2 flex-column">
+                        <div class="balance-logo">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3>افراد <span>(تمثيل قانوني)</span></h3>
+                        <p>احتيجاتك القانونية</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row All-about-cards">
+                <div class="about-card col-12 col-md-6 col-lg-3 mb-2 text-center">
+                    <div class="about-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h4>شركات</h4>
+                    <h5>قريبا</h5>
+                </div>
+                <div class="about-card col-12 col-md-6 col-lg-3 mb-2 text-center">
+                    <div class="about-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h4>مؤسسات حكومية</h4>
+                    <h5>قريبا</h5>
+                </div>
+                <div class="about-card col-12 col-md-6 col-lg-3 mb-2 text-center">
+                    <div class="about-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h4>صياغة العقود</h4>
+                    <h5>قريبا</h5>
+                </div>
+                <div class="about-card col-12 col-md-6 col-lg-3 mb-2 text-center">
+                    <div class="about-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h4>تمثيل قضايا مستعجل</h4>
+                    <h5>قريبا</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section three  -->
+    <section class="about-two" id="about-two-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 ">
+                    <div
+                        class="section-header d-flex flex-column justify-content-center align-items-center  text-center pb-5">
+                        <h2>من نحن</h2>
+                        <p>الشركة رائدة تستهدف سوق واحد من الاسواق القانوني<br>في تنظيم خدمة التقاضي ..ونحن أداة ربط
+                        </p>
+                        <button>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            اعرف المزيد
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="icon-info d-flex flex-column justify-content-center align-items-center text-center ">
+                        <i class="fa-brands fa-searchengin"></i>
+                        <h3>المشكلة</h3>
+                        <p>المشكلة هي في البحث عن محامي مختص أو الوصول للعميل المستهدف </p>
+                        <button>
+                            اعرف المزيد
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="icon-info d-flex flex-column justify-content-center align-items-center text-center ">
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                        <h3>الحل</h3>
+                        <p>الحل هو وضع كيان وسيط ومرشد قانوني ولة وظيفتين أساسية</p>
+                        <button>
+                            اعرف المزيد
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section Four  -->
+    <section class="team p-3 mt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 ">
+                    <div
+                        class="section-header d-flex flex-column justify-content-center align-items-center  text-center pb-5">
+                        <h2>الفريق وخبراتهم</h2>
+                        <p>نحن نملك 30 عام من الخبرة</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="lawyer-card col-lg-3 col-md-6 d-flex flex-column gap-2 ">
+                    <div class="lawyer-head d-flex flex-row gap-3 align-items-center justify-content-center">
+                        <div class="info">
+                            <h3>ابراهيم ناصر الحمدان</h3>
+                            <p>المدير التنفيذي والمبيعات</p>
+                        </div>
+                        <div class="icon mb-4">
+                            <i class="fa-solid fa-sort-down"></i>
+                        </div>
+                    </div>
+                    <div class="lawyer-info d-flex flex-column gap-3 align-items-center justify-content-center">
+                        <div class="lawyer-Descrption">
+                            بكالوريوس شريعة وقانون و رأئد أعمال تجاري وفي سوق العمل من سنوات ومؤسس لشركتين
+                            (غذائيةوتقنية )
+                        </div>
+                        <div class="lowyer-Socail d-flex flex-row gap-3 align-items-center justify-content-center">
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="lawyer-card col-lg-3 col-md-6 d-flex flex-column gap-2 ">
+                    <div class="lawyer-head d-flex flex-row gap-3 align-items-center justify-content-center">
+                        <div class="info">
+                            <h3>ابراهيم ناصر الحمدان</h3>
+                            <p>المدير التنفيذي والمبيعات</p>
+                        </div>
+                        <div class="icon mb-4">
+                            <i class="fa-solid fa-sort-down"></i>
+                        </div>
+                    </div>
+                    <div class="lawyer-info d-flex flex-column gap-3 align-items-center justify-content-center">
+                        <div class="lawyer-Descrption">
+                            بكالوريوس شريعة وقانون و رأئد أعمال تجاري وفي سوق العمل من سنوات ومؤسس لشركتين
+                            (غذائيةوتقنية )
+                        </div>
+                        <div class="lowyer-Socail d-flex flex-row gap-3 align-items-center justify-content-center">
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="lawyer-card col-lg-3 col-md-6 d-flex flex-column gap-2 ">
+                    <div class="lawyer-head d-flex flex-row gap-3 align-items-center justify-content-center">
+                        <div class="info">
+                            <h3>ابراهيم ناصر الحمدان</h3>
+                            <p>المدير التنفيذي والمبيعات</p>
+                        </div>
+                        <div class="icon mb-4">
+                            <i class="fa-solid fa-sort-down"></i>
+                        </div>
+                    </div>
+                    <div class="lawyer-info d-flex flex-column gap-3 align-items-center justify-content-center">
+                        <div class="lawyer-Descrption">
+                            بكالوريوس شريعة وقانون و رأئد أعمال تجاري وفي سوق العمل من سنوات ومؤسس لشركتين
+                            (غذائيةوتقنية )
+                        </div>
+                        <div class="lowyer-Socail d-flex flex-row gap-3 align-items-center justify-content-center">
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="lawyer-card col-lg-3 col-md-6 d-flex flex-column gap-2 ">
+                    <div class="lawyer-head d-flex flex-row gap-3 align-items-center justify-content-center">
+                        <div class="info">
+                            <h3>ابراهيم ناصر الحمدان</h3>
+                            <p>المدير التنفيذي والمبيعات</p>
+                        </div>
+                        <div class="icon mb-4">
+                            <i class="fa-solid fa-sort-down"></i>
+                        </div>
+                    </div>
+                    <div class="lawyer-info d-flex flex-column gap-3 align-items-center justify-content-center">
+                        <div class="lawyer-Descrption">
+                            بكالوريوس شريعة وقانون و رأئد أعمال تجاري وفي سوق العمل من سنوات ومؤسس لشركتين
+                            (غذائيةوتقنية )
+                        </div>
+                        <div class="lowyer-Socail d-flex flex-row gap-3 align-items-center justify-content-center">
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section Five  -->
+    <section class="contact-section" id="contact-section">
+        <div class="over-lay">
+            <div class="container">
+                <div class="row">
+                    <div class="d-flex justify-content-between flex-column flex-md-row gap-4">
+                        <div class="contact-form col-12 col-md-4">
+                            <div class="form-Container">
+                                <div class="form-floating mb-3 form">
+                                    <input type="text" class="form-control form-input" placeholder="">
+                                    <label for="name" class="form-label">الاسم</label>
+                                </div>
+                                <div class="form-floating mb-3 form">
+                                    <input type="text" class="form-control form-input" id="" placeholder="">
+                                    <label for="phoneNumber" class="form-label">الجوال</label>
+                                </div>
+                                <div class="form-floating mb-3 form">
+                                    <input type="email" class="form-control form-input" id="" placeholder="">
+                                    <label for="email" class="form-label">الاميل</label>
+                                </div>
+                                <div class="form-floating mb-3 form">
+                                    <textarea type="" class="form-control form-input form-textarea" id=""
+                                        placeholder=""></textarea>
+                                    <label for="message" class="form-label">أكتب رسالة</label>
+                                </div>
+                                <button class="form-button" type="submit">
+                                    أرسال
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="Contact-info col-12 col-md-8">
+                            <h1 class="Plateform-name">واقعة</h1>
+                            <p class="Plateform-desc">
+                                سجل معنا أذا كنت محتاج إستشارة قانونية <br>
+                                سجل اذا كنت محامى وحابب تكون عضو فى فريق واقعة
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section Footer  -->
+    <footer>
+        <div class="container-flude footer-section pt-3">
+            <div class="row">
+                <div class="footer-info col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="logo" class="img-fluid" width="60px">
+                        <h3>مكتب واقعة للأستشارات القانونية</h3>
+                        <p>هي منصة علاقتك واحتياجك القانونية مع افضل المحامين </p>
+                    </div>
+                </div>
+                <div class="footer-icons col-lg-2 col-md-6 col-12 mb-3">
+                    <h3>تابعنا</h3>
+                    <div class="icons">
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="footer-contact col-lg-2 col-md-6 col-12 mb-3">
+                    <h3>تواصل معانا</h3>
+                    <p>(+75)81 2345 1234</p>
+                    <p>Contact@gmail.com</p>
+                    <p>Ubud No.88,New York</p>
+                    <p>USA,Renon, NewYork</p>
+                </div>
+                <div class="footer-contact-Email col-lg-5 col-md-6 col-12 mb-3">
+                    <div class="head">
+                        <p>For exclusive news and market updates sign up for our newsletter.</p>
+                    </div>
+                    <div class="input-Email">
+                        <div class="form-floating">
+                            <input type="email" class="form-control form-input w-100" placeholder="">
+                            <label for="name" class="form-label">
+                                <i class="form-icon m-2 fa-solid fa-envelope"></i>
+                                <span>Enter Your Email Address</span>
+                            </label>
+                        </div>
+                        <button class="form-button" type="submit">
+                            أرسال
+                        </button>
+                    </div>
+                    <a class="link-contact" href="#contact-section">تواصل معنا</a>
+                </div>
+            </div>
+            <div class="row Copyright">
+                <div class="col-12">
+                    Copyright2024@waqaa all Right Reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/landding.js"></script>
+    <script>
+        // Mobile menu toggle
+        const openBtn = document.getElementById('openMobileMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('mobileOverlay');
+        const closeBtn = document.getElementById('closeMobile');
+
+        function openMenu() {
+            mobileMenu.classList.add('open');
+            overlay.style.display = 'block';
+        }
+        function closeMenu() {
+            mobileMenu.classList.remove('open');
+            overlay.style.display = 'none';
+        }
+        if (openBtn) openBtn.addEventListener('click', openMenu);
+        if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+        if (overlay) overlay.addEventListener('click', closeMenu);
+
+        // ✅ FIX 1: Close mobile menu when any link inside is clicked
+        document.querySelectorAll('#mobileMenu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                closeMenu();
+            });
+        });
+    </script>
+</body>
+
+</html>

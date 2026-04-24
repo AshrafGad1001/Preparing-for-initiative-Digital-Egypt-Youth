@@ -1,0 +1,38 @@
+// ----Main Colors 
+$primary-color-dark: #0f111e;
+$primary-color-light: #caa280;
+
+// -----Secondary Colors
+$secondary-color-light: #d3ae8e;
+$secondary-color-main-light: #B1B1B2;
+
+// -----third Colors
+$third-color-gray: rgb(90, 91, 101);
+$third-color-darkGray: rgb(40, 43, 58);
+$background-light: #efe3d8;
+$background-dark-helper: #282B3A;
+// -----Helpers
+$main-border-color: rgba(152, 102, 102, 0.5);
+
+// -----Font family------
+$font-primary: "Almarai", "sans-serif";
+
+// -----Font weight------
+$weight-regular: 400;
+$weight-medium: 500;
+
+//----- Font size  ------
+$fs-label-large: 1.4rem;
+$fs-label-medium: 1.2rem;
+$fs-label-small: 1.1rem;
+$fs-title-medium: 1.6rem;
+$fs-title-small: 1.4rem;
+$fs-body-large: 1.6rem;
+$fs-body-medium: 1.4rem;
+
+/* Border Radius */
+$radius-4: 4px;
+$radius-8: 8px;
+$radius-12: 12px;
+$radius-circle: 50%;
+$header-height: 90px;
