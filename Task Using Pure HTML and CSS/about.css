@@ -1,0 +1,145 @@
+/* ============================================
+   ABOUT PAGE — about.css
+   ============================================ */
+
+/* ─── ABOUT HERO ─────────────────────────────── */
+.about-hero {
+  padding: 80px 0;
+  background-color: var(--light);
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 0.97rem;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.about-image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+.about-img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  /* Fallback if image missing */
+  background-color: #2d5a3d;
+  display: block;
+}
+
+/* ─── MISSION / VISION / VALUES ─────────────── */
+.mvv-section {
+  padding: 72px 0;
+  background-color: var(--white);
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.mvv-card {
+  text-align: center;
+  padding: 40px 24px;
+  border-radius: var(--radius);
+  background-color: var(--light);
+  transition: var(--transition);
+}
+
+.mvv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.mvv-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.mvv-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--navy);
+}
+
+.mvv-card p {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+/* ─── STATS BAR ──────────────────────────────── */
+.stats-bar {
+  background-color: var(--darkest);
+  padding: 52px 0;
+}
+
+.stats-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.stat-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 60px;
+  background-color: rgba(255,255,255,0.12);
+  flex-shrink: 0;
+}
+
+/* ─── RESPONSIVE ────────────────────────────── */
+@media (max-width: 768px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-text h1 { font-size: 2rem; }
+  .mvv-grid { grid-template-columns: 1fr; }
+  .stats-grid { flex-direction: column; gap: 32px; }
+  .stat-divider { width: 60px; height: 1px; }
+}

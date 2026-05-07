@@ -1,0 +1,99 @@
+/* ============================================
+   GALLERY PAGE — gallery.css
+   ============================================ */
+
+/* ─── GALLERY HEADER ─────────────────────────── */
+.gallery-header {
+  padding: 64px 0 0;
+  background-color: var(--white);
+  text-align: center;
+}
+
+/* ─── GALLERY SECTION ────────────────────────── */
+.gallery-section {
+  padding: 24px 0 80px;
+  background-color: var(--white);
+}
+
+/* ─── GALLERY GRID ───────────────────────────── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* ─── GALLERY ITEM ───────────────────────────── */
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+
+  /* Fallback background color if image is missing */
+  background-color: #c8dfc8;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+/* Hover zoom effect */
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Overlay on hover */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 20, 19, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay span {
+  font-size: 2.5rem;
+  transform: scale(0.6);
+  transition: transform 0.35s ease;
+}
+
+.gallery-item:hover .gallery-overlay span {
+  transform: scale(1);
+}
+
+/* Fallback: color placeholders when images are missing */
+.gallery-item:nth-child(1) { background-color: #2d5a3d; }
+.gallery-item:nth-child(2) { background-color: #3a6b2e; }
+.gallery-item:nth-child(3) { background-color: #1e4d2b; }
+.gallery-item:nth-child(4) { background-color: #2c5f4a; }
+.gallery-item:nth-child(5) { background-color: #3d5a30; }
+.gallery-item:nth-child(6) { background-color: #1a4a35; }
+.gallery-item:nth-child(7) { background-color: #264d3b; }
+.gallery-item:nth-child(8) { background-color: #3b5e25; }
+.gallery-item:nth-child(9) { background-color: #1d4428; }
+
+/* ─── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,307 @@
+/* ============================================
+   ECOLIFE — SHARED STYLESHEET
+   Palette: #E87F24 | #454040 | #F5F5F5 | #003049 | #091413
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Mulish:wght@300;400;500;600;700&display=swap');
+
+/* ─── CSS VARIABLES ─────────────────────────── */
+:root {
+  --orange:   #E87F24;
+  --gray:     #454040;
+  --light:    #F5F5F5;
+  --navy:     #003049;
+  --darkest:  #091413;
+  --white:    #ffffff;
+  --shadow:   0 4px 20px rgba(0,0,0,0.08);
+  --radius:   12px;
+  --transition: all 0.3s ease;
+}
+
+/* ─── RESET & BASE ──────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Mulish', sans-serif;
+  font-size: 16px;
+  color: var(--gray);
+  background-color: var(--white);
+  line-height: 1.7;
+}
+
+img { display: block; width: 100%; }
+
+a { text-decoration: none; color: inherit; }
+
+ul { list-style: none; }
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: var(--navy);
+  line-height: 1.25;
+}
+
+/* ─── UTILITY ───────────────────────────────── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--gray);
+  font-size: 1rem;
+  margin-bottom: 48px;
+  font-weight: 400;
+}
+
+/* ─── BUTTONS ───────────────────────────────── */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: #cf6e1a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(232,127,36,0.35);
+}
+
+.btn-outline {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--navy);
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 2px solid var(--navy);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+/* ─── NAVBAR ────────────────────────────────── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: var(--white);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 70px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.nav-logo .leaf {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--gray);
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.25s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--orange);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--navy);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ─── FOOTER ────────────────────────────────── */
+footer {
+  background-color: var(--darkest);
+  color: rgba(255,255,255,0.75);
+  padding-top: 56px;
+}
+
+.footer-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px 40px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.footer-brand p {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.55);
+  max-width: 220px;
+}
+
+.footer-col h4 {
+  font-family: 'Mulish', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  transition: color 0.25s;
+}
+
+.footer-col ul li a:hover {
+  color: var(--orange);
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.social-icons a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  background-color: var(--orange);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  padding: 18px 40px;
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ─── PAGE FADE-IN ANIMATION ─────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fadeUp 0.65s ease both;
+}
+
+.fade-up-2 { animation: fadeUp 0.65s 0.15s ease both; }
+.fade-up-3 { animation: fadeUp 0.65s 0.30s ease both; }
+.fade-up-4 { animation: fadeUp 0.65s 0.45s ease both; }
+
+/* ─── RESPONSIVE ────────────────────────────── */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 680px) {
+  .navbar {
+    padding: 0 20px;
+    flex-wrap: wrap;
+    height: auto;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    gap: 12px;
+  }
+  .nav-links { gap: 18px; }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    padding: 0 24px 32px;
+  }
+  .section-title { font-size: 1.6rem; }
+}
